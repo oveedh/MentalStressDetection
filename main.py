@@ -136,12 +136,7 @@ def extract_features_mean_stddev(data):
     features_power['beta_power'] = data.apply(lambda x: np.sum(psd[(f >= 13) & (f <= 30)]), axis=1)
     return features_power
 
-
-# Example usage:
-#folder_path = "/Users/pranav/Downloads/stress_data"  # Replace with the actual path
-#folder_path = "/Users/pranav/Downloads/stress_data_5"
-#folder_path = "/Users/pranav/Downloads/stress_data_10"
-folder_path = "/Users/pranav/Downloads/stress_data_full"
+folder_path = "/Users/oveedharwadkar/Downloads/stress_data_full"
 
 all_data, all_labels = load_eeg_from_folder(folder_path)
 print("Length of All Data and All Labels", len(all_data), len(all_labels))
